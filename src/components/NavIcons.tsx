@@ -37,7 +37,7 @@ const NavIcons = () => {
 
   const login = async () => {
     const loginRequestData = wixClient.auth.generateOAuthData(
-      "http://localhost:3000"
+      "https://clothes-hub.vercel.app"
     );
 
     console.log(loginRequestData);
