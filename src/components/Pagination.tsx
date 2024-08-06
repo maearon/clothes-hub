@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Pagination = ({
   currentPage,
@@ -12,13 +12,13 @@ const Pagination = ({
   hasNext: boolean;
 }) => {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const { replace } = useRouter();
 
   const createPageUrl = (pageNumber: number) => {
-    const params = new URLSearchParams(searchParams);
-    params.set("page", pageNumber.toString());
-    replace(`${pathname}?${params.toString()}`);
+    // const params = new URLSearchParams(searchParams);
+    // params.set("page", pageNumber.toString());
+    // replace(`${pathname}?${params.toString()}`);
   };
 
   return (
